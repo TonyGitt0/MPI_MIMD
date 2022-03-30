@@ -17,7 +17,7 @@ int main(int argc, char* argv[]){
     
 
     if(rank == 0){
-        //Antonio una i è il rank principale a fess e mammt
+        //Una i è il rank master
         for(int i = 1; i < 4; i++) {
             MPI_Send(&mark, sizeof(mark)/sizeof(int), MPI_INT,i,i,MPI_COMM_WORLD);
         }
